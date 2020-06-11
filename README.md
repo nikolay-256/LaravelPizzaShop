@@ -4,32 +4,9 @@
 
 # Aimeos shop system
 
-[![Total Downloads](https://poser.pugx.org/aimeos/aimeos/d/total.svg)](https://packagist.org/packages/aimeos/aimeos)
 [![License](https://poser.pugx.org/aimeos/aimeos/license.svg)](https://packagist.org/packages/aimeos/aimeos)
 
 :star: Star us on GitHub — it helps!
-
-[Aimeos](https://aimeos.org/Laravel) is THE professional, full-featured and
-high performance e-commerce platform! You can install it within 5 minutes
-and can adapt, extend, overwrite and customize anything to your needs.
-
-[![Aimeos Laravel demo](https://aimeos.org/fileadmin/aimeos.org/images/aimeos-github.png)](http://laravel.demo.aimeos.org/)
-
-## Package only
-
-Want to **integrate Aimeos** into your **existing application**?
-
-Use the [Aimeos Laravel package](https://github.com/aimeos/aimeos-laravel) directly!
-
-## Table of content
-
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Frontend](#frontend)
-- [Backend](#backend)
-- [Customize](#customize)
-- [License](#license)
-- [Links](#links)
 
 ## Requirements
 
@@ -39,26 +16,18 @@ The Aimeos shop distribution requires:
 - MySQL >= 5.7
 - Web server (Apache, Nginx or integrated PHP web server for testing)
 
-If required PHP extensions are missing, `composer` will tell you about the missing
-dependencies.
 
 ## Installation
 
-To install the Aimeos shop application, you need [composer](https://getcomposer.org).
-On the CLI, execute this command for a complete installation including a working setup:
-
-`composer create-project aimeos/aimeos myshop`
-
-You will be asked for the parameters of your database and mail server as well as an
-e-mail and password used for creating the administration account.
-
-In a local environment, you can use the integrated PHP web server to test your new Aimeos
-installation. Simply execute the following command to start the web server:
-
 ```
-cd myshop
+composer install
+cp .env.example .env
+php artisan serve
+php artisan migrate
+php artisan key:generate
 php artisan serve
 ```
+
 
 ## Frontend
 
